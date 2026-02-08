@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Detective Anime Episode 1</title>
+
+<style>
+body{
+margin:0;
+background:black;
+overflow:hidden;
+font-family:Arial, sans-serif;
+color:white;
+}
+
+/* background video */
+video{
+position:fixed;
+width:100%;
+height:100%;
+object-fit:cover;
+filter: brightness(0.55) contrast(1.2) saturate(1.3);
+}
+
+/* dark overlay */
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
+
+/* netflix style title */
+.title{
+position:absolute;
+top:35%;
+width:100%;
+text-align:center;
+font-size:65px;
+letter-spacing:6px;
+color:red;
+animation: fadeTitle 4s forwards;
+}
+
+@keyframes fadeTitle{
+0%{opacity:0; transform:scale(0.7);}
+100%{opacity:1; transform:scale(1);}
+}
+
+/* episode text */
+.ep{
+position:absolute;
+top:20%;
+width:100%;
+text-align:center;
+font-size:22px;
+letter-spacing:3px;
+color:white;
+opacity:0.8;
+}
+
+/* subtitles anime style */
+.sub{
+position:absolute;
+bottom:60px;
+width:100%;
+text-align:center;
+font-size:28px;
+opacity:0;
+animation: subtitle 8s infinite;
+}
+
+@keyframes subtitle{
+0%{opacity:0;}
+20%{opacity:1;}
+60%{opacity:1;}
+100%{opacity:0;}
+}
+
+/* play button */
+.playbtn{
+position:absolute;
+bottom:140px;
+left:50%;
+transform:translateX(-50%);
+padding:14px 40px;
+font-size:20px;
+background:red;
+border:none;
+color:white;
+border-radius:8px;
+cursor:pointer;
+box-shadow:0 0 20px red;
+}
+</style>
+</head>
+
+<body>
+
+<video autoplay loop muted>
+<source src="detective.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="ep">ANIME SERIES</div>
+
+<div class="title">
+DETECTIVE SHADOW
+</div>
+
+<div class="sub">
+"In this city… every truth hides a crime."
+</div>
+
+<button class="playbtn" onclick="alert('Episode 1 Starting...')">
+▶ Start Episode
+</button>
+
+</body>
+</html>
 
